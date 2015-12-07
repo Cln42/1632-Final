@@ -1,0 +1,38 @@
+Escape the Island Requirements: 
+
+FUN_WELCOME_MSG: When the program first starts, the program should print out a welcome message and the command descriptions 
+
+FUN_PROMPT: On each iteration, the program should print out the current location name and the prompt '>'
+
+FUN_INPUT: Options for valid input should be F, Forward, B, Back, L, Look, H, Help, I, Inventory, C, Craft, E, and Exit
+
+FUN_UNKNOWN_INPUT: When invalid input is entered, the program should print out an error message
+
+FUN_LOCATIONS: There should be 6 locations: Main Beach, North Beach, North Forest, Main Forest, South Forest, South Beach 
+
+FUN_CIRCLE: The locations should be arranged in a circle such that there is no beginning or end location
+
+FUN_FORWARD: Input F or Forward will take user to the next location
+
+FUN_BACK: Input B or Back will take user back to previous location
+
+FUN_LOOK: Input L or Look will list any items found in that location and add them to the inventory
+
+FUN_HELP: Input H or Help will display a message with the command descriptions 
+
+FUN_CRAFT_HELP: Input C or Craft without an item or with invalid item will display a help message for the user
+
+FUN_CRAFT_VALID: Input C [item] or Craft [item] when user has all required items, will subtract those items from inventory and the crafted item will be added to inventory 
+
+FUN_CRAFT_INVALID: Input C [item] or Craft [item] when user does not have all required items, will print out message saying what items user needs
+
+FUN_INVENTORY: Input I or Inventory will display the user's inventory
+
+FUN_CASE: Program should be case insensitive 
+
+FUN_BOAT: When inventory of Boat = 1, a Success message will print out and program will exit.
+
+FUN_EXIT: Input E or Exit will print out a failure message and program will exit
+
+
+
