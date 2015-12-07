@@ -3,6 +3,14 @@ import java.io.*;
 import org.junit.*;
 import static org.mockito.Mockito.*;
 
+/* IslandEscapeTest.java 
+ * Tests IslandEscape.java and Location.java
+ * Has one test to test each requirement
+ * 
+ * Written by Casey Nispel, Cln42@pitt.edu
+ * For CS1632 Final Deliverable
+ */
+
 public class IslandEscapeTest {
 
 	private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();

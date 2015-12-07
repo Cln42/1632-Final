@@ -1,4 +1,10 @@
-
+/* Location.java
+ * Each location has a number and a name. Names and whether 
+ * location has been searched are stored in arrays
+ * 
+ * Written by Casey Nispel, Cln42@pitt.edu
+ * For CS1632 Final Deliverable
+ */
 public class Location {
 
 	private int num;
@@ -35,6 +41,7 @@ public class Location {
 	public void setSearched(){
 		searched[num] = true;
 	}
+	
 	public int moveForward(){
 		num=(num+1)%6;
 		name = names[num];

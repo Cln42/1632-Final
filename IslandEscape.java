@@ -1,11 +1,21 @@
 import java.util.*;
 
+/* IslandEscape.java
+ * Basic text-based game where user must collect various
+ * items and combine them to create a boat. Upon creating
+ * a boat, the user wins and program exits.
+ * 
+ * Written by Casey Nispel, Cln42@pitt.edu
+ * For CS1632 Final Deliverable
+ */
 
 public class IslandEscape {
-	public static Location location; 
-	public static boolean keepGoing;
+	public static Location location; //user's current location
+	public static boolean keepGoing; //true until win() or lose() is called
 	 
-	
+	/* Stores which items are in each location
+	 * in format {item1ID, item1Quantity, item2ID, item2Quantity}
+	 */
 	static int[][] items= {{5, 2, 6, 1}, 
 					{4, 1, 5, 2}, 
 					{5, 3, 6, 3},
@@ -19,7 +29,8 @@ public class IslandEscape {
 	
 	
 
-	
+	/* Print out inventory
+	 */
 	private static void printInventory(){
 		System.out.print("Inventory:\n===================\n");
 		for(int i=0; i<8; i++){ 
@@ -33,17 +44,24 @@ public class IslandEscape {
 		System.out.println();
 	}
 	
+	/* Prints out winning message and lets program exit
+	 */
 	private static void win(){
 		System.out.print("Congratulations!\nYou have built a boat and escaped the island!\nYou win!\n");
 		keepGoing = false;
 	}
 	
+	/* Prints out losing message and lets program exit
+	 */
 	private static void lose(){
 		System.out.print("You have not escaped the island!\nYou lose.\n");
 		keepGoing = false;
 	}
 	
 	 
+	/* Parses user input
+	 * to take appropriate response
+	 */
 	public static int parseInput(String input, Location loc){
 		input=input.toLowerCase();
 		int ret = -1;
@@ -116,6 +134,8 @@ public class IslandEscape {
 		return ret;
 	}
 	
+	/* Prints out help message for user
+	 */
 	public static void helpMessage(){
 		String message = "You wake up on a desert island. Can you build a boat to escape?\n\n"
 				+ "Commands:\n=========\n"
@@ -139,7 +159,10 @@ public class IslandEscape {
 		System.out.print(prompt);
 	}
 	
-
+	/* Sets initial location to O, Main Beach
+	 * Prints out initial Help Message
+	 * Gets user input until keepGoing = false
+	 */
 	public static void main(String[] args){
 		Scanner scan = new Scanner(System.in);
 		String input = "";
