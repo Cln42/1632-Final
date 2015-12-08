@@ -28,7 +28,9 @@ public class IslandEscapeTest {
 	 */
 	@Test
 	public void FUN_WELCOME_MSG_TEST() {
-		String message = "You wake up on a desert island. Can you build a boat to escape?\n\n"
+		String message = "Welcome to Island Escape!\n"
+				+ "==========================\n\n"
+				+ "You wake up on a desert island. Can you build a boat to escape?\n\n"
 				+ "Commands:\n=========\n"
 				+ "F or Forward: Move forward to the next location\n"
 				+ "B or Back: Move back to previous location\n"
@@ -36,11 +38,11 @@ public class IslandEscapeTest {
 				+ "I or Inventory: Display your inventory\n"
 				+ "C [item] or Craft [item]: Create an item using current items\n"
 				+ "H or Help: Display game information\n\n"
-				+ "Craft Commands;\n==============\n"
+				+ "Craft Commands:\n===============\n"
 				+ "Craft Torch: requires 1 stick and 1 flint\n"
 				+ "Craft Fire: requires 5 rocks, 5 sticks, and 1 torch\n"
 				+ "Craft Boat: requires 5 logs, 1 rope, and 1 fire\n\n";
-		IslandEscape.helpMessage();
+		IslandEscape.welcomeMessage();
 		assertEquals(message, outContent.toString());
 	}
 	
@@ -137,7 +139,7 @@ public class IslandEscapeTest {
 	 */
 	@Test
 	public void FUN_HELP_TEST() {
-		String message = "You wake up on a desert island. Can you build a boat to escape?\n\n"
+		String message = "Goal: Make a Boat to escape the island\n\n"
 				+ "Commands:\n=========\n"
 				+ "F or Forward: Move forward to the next location\n"
 				+ "B or Back: Move back to previous location\n"
@@ -145,7 +147,7 @@ public class IslandEscapeTest {
 				+ "I or Inventory: Display your inventory\n"
 				+ "C [item] or Craft [item]: Create an item using current items\n"
 				+ "H or Help: Display game information\n\n"
-				+ "Craft Commands;\n==============\n"
+				+ "Craft Commands:\n===============\n"
 				+ "Craft Torch: requires 1 stick and 1 flint\n"
 				+ "Craft Fire: requires 5 rocks, 5 sticks, and 1 torch\n"
 				+ "Craft Boat: requires 5 logs, 1 rope, and 1 fire\n\n";
