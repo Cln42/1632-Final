@@ -10,52 +10,49 @@ public class Location {
 	private int num;
 	private String name;
 
-	
-	String[] names = {"Main Beach", "North Beach", "North Forest", 
-					"Main Forest", "South Forest", "South Beach"};
+	String[] names = { "Main Beach", "North Beach", "North Forest", "Main Forest", "South Forest", "South Beach" };
 
-	Boolean[] searched = {false, false, false, false, false, false};
-	
-	public Location(int i){
-		i = i%6;
+	Boolean[] searched = { false, false, false, false, false, false };
+
+	public Location(int i) {
+		i = i % 6;
 		num = i;
 		name = names[i];
 	}
 
-	public String[] getAllLocations(){
+	public String[] getAllLocations() {
 		return names;
 	}
-	
-	public String getName(){
+
+	public String getName() {
 		return name;
 	}
-	
-	public int getNum(){
+
+	public int getNum() {
 		return num;
 	}
-	
-	public boolean getSearched(){
+
+	public boolean getSearched() {
 		return searched[num];
 	}
-	
-	public void setSearched(){
+
+	public void setSearched() {
 		searched[num] = true;
 	}
-	
-	public int moveForward(){
-		num=(num+1)%6;
-		name = names[num];
-		return num;
-	}
-	
-	public int moveBack(){
-		num-=1;
-		if(num<0){num=5;}
+
+	public int moveForward() {
+		num = (num + 1) % 6;
 		name = names[num];
 		return num;
 	}
 
-
+	public int moveBack() {
+		num -= 1;
+		if (num < 0) {
+			num = 5;
+		}
+		name = names[num];
+		return num;
+	}
 
 }
-
